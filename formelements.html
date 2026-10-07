@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Form Elements</title>
+</head>
+<body>
+
+    <h2>HTML Form Elements</h2>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Form Elements</th>
+            <th>Sample Output</th>
+        </tr>
+        <tr>
+            <td>&lt;input type="text"&gt;</td>
+            <td>Text Input: <input type="text" placeholder="Enter plain text"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="password"&gt;</td>
+            <td>Password Input: <input type="password" placeholder="Enter password"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="email"&gt;</td>
+            <td>Email Input: <input type="email" value="user@example.com"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="url"&gt;</td>
+            <td>URL Input: <input type="url" value="https://example.com"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="tel"&gt;</td>
+            <td>Telephone Input: <input type="tel" value="123-456-7890"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="search"&gt;</td>
+            <td>Search Input: <input type="search" placeholder="Search site..."></td>
+        </tr>
+        <tr>
+            <td>&lt;textarea&gt;</td>
+            <td>
+                Textarea:<br>
+                <textarea rows="4" cols="30" placeholder="Type your biography here..."></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>&lt;input type="number"&gt;</td>
+            <td>Number Input: <input type="number" value="25"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="range"&gt;</td>
+            <td>Range Input: <input type="range"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="date"&gt;</td>
+            <td>Date Input: <input type="date"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="time"&gt;</td>
+            <td>Time Input: <input type="time"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="datetime-local"&gt;</td>
+            <td>Date &amp; Time Local: <input type="datetime-local"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="month"&gt;</td>
+            <td>Month Input: <input type="month"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="week"&gt;</td>
+            <td>Week Input: <input type="week"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="checkbox"&gt;</td>
+            <td><input type="checkbox"> I agree to the terms and conditions</td>
+        </tr>
+        <tr>
+            <td>Multiple Checkboxes</td>
+            <td>
+                Hobbies:<br>
+                <input type="checkbox"> Reading 
+                <input type="checkbox"> Sports 
+                <input type="checkbox" checked> Coding
+            </td>
+        </tr>
+        <tr>
+            <td>&lt;input type="radio"&gt;</td>
+            <td>
+                Contact Preference:<br>
+                <input type="radio" name="contact" checked> Email 
+                <input type="radio" name="contact"> Phone 
+                <input type="radio" name="contact"> Mail
+            </td>
+        </tr>
+        <tr>
+            <td>&lt;select&gt;</td>
+            <td>
+                Select Dropdown: 
+                <select>
+                    <option>-- Select a Country --</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>&lt;select multiple&gt;</td>
+            <td>
+                Multiple Select Box:<br>
+                <select multiple size="4">
+                    <option selected>HTML5</option>
+                    <option selected>CSS3</option>
+                    <option selected>JavaScript</option>
+                    <option selected>SQL</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>&lt;datalist&gt;</td>
+            <td>
+                Datalist Input: <input list="browsers" placeholder="Type or choose a browser">
+                <datalist id="browsers">
+                    <option value="Chrome">
+                    <option value="Firefox">
+                    <option value="Edge">
+                    <option value="Safari">
+                </datalist>
+            </td>
+        </tr>
+        <tr>
+            <td>&lt;input type="file"&gt;</td>
+            <td>File Input: <input type="file"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="color"&gt;</td>
+            <td>Color Picker: <input type="color" value="#ff0000"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="hidden"&gt;</td>
+            <td>Hidden input — no visible output.</td>
+        </tr>
+        <tr>
+            <td>&lt;output&gt;</td>
+            <td>A: <input type="number" value="10" style="width: 40px;"> + B: <input type="number" value="20" style="width: 40px;"> = <output>30</output></td>
+        </tr>
+        <tr>
+            <td>&lt;meter&gt;</td>
+            <td>Meter Element: <meter value="0.6"></meter></td>
+        </tr>
+        <tr>
+            <td>&lt;progress&gt;</td>
+            <td>Progress Element: <progress value="70" max="100"></progress></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="submit"&gt;</td>
+            <td><input type="submit" value="Submit Input Button"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="reset"&gt;</td>
+            <td><input type="reset" value="Reset Input Button"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="button"&gt;</td>
+            <td><input type="button" value="Plain Input Button"></td>
+        </tr>
+        <tr>
+            <td>&lt;input type="image"&gt;</td>
+            <td>
+                Image Submit Button:<br>
+                <input type="submit" value="Submit" style="background-color: black; color: white; padding: 5px 15px;">
+            </td>
+        </tr>
+        <tr>
+            <td>&lt;button type="submit"&gt;</td>
+            <td><button type="submit">Submit Button Tag</button></td>
+        </tr>
+        <tr>
+            <td>&lt;button type="reset"&gt;</td>
+            <td><button type="reset">Reset Button Tag</button></td>
+        </tr>
+        <tr>
+            <td>&lt;button type="button"&gt;</td>
+            <td><button type="button">Custom Button Tag</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>
