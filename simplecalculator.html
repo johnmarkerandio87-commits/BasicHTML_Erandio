@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: serif;
+      text-align: center;
+      margin-top: 30px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+    td {
+      border: 1px solid black;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    input[type="number"] {
+      padding: 4px;
+    }
+    .btn-container {
+      text-align: center;
+      padding: 10px;
+    }
+    button {
+      padding: 6px 16px;
+      cursor: pointer;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 15px;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Calculator</h2>
+
+  <table>
+    <tr>
+      <td><strong>First Number:</strong></td>
+      <td><input type="number" id="num1" placeholder="Enter first number"></td>
+    </tr>
+    <tr>
+      <td><strong>Second Number:</strong></td>
+      <td><input type="number" id="num2" placeholder="Enter second number"></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="btn-container">
+        <button onclick="computeSimple()">Compute</button>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="btn-container">
+        <button onclick="resetSimple()">Reset</button>
+      </td>
+    </tr>
+  </table>
+
+  <div id="resultBox" style="margin-top: 10px; font-weight: bold;"></div>
+
+  <br>
+  <a href="basic.html" class="back-btn">Home</a>
+
+  <script>
+    function computeSimple() {
+      let n1 = parseFloat(document.getElementById('num1').value) || 0;
+      let n2 = parseFloat(document.getElementById('num2').value) || 0;
+      let sum = n1 + n2;
+      document.getElementById('resultBox').innerText = "Result: " + sum;
+    }
+
+    function resetSimple() {
+      document.getElementById('num1').value = "";
+      document.getElementById('num2').value = "";
+      document.getElementById('resultBox').innerText = "";
+    }
+  </script>
+
+</body>
+</html>
