@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+      margin: 0;
+    }
+    .card {
+      width: 320px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+    h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #000;
+    }
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: bold;
+      color: #64748b;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .output-val {
+      font-weight: bold;
+      font-size: 14px;
+      color: #000;
+      margin-top: 2px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .btn-compute {
+      flex: 1;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn-reset {
+      flex: 1;
+      background-color: #64748b;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .footer {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .back-btn {
+      display: block;
+      margin-top: 15px;
+      color: #000;
+      text-decoration: underline;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>Discount Calculator</h3>
+
+    <label>Price Before Discount</label>
+    <input type="number" id="price" placeholder="">
+
+    <label>Discount (%)</label>
+    <input type="number" id="discount" placeholder="">
+
+    <label>Price After Discount</label>
+    <div class="output-val" id="finalPrice">₱ 0.00</div>
+
+    <label>Saved Amount</label>
+    <div class="output-val" id="savedAmount">₱ 0.00</div>
+
+    <div class="btn-group">
+      <button class="btn-compute" onclick="computeDiscount()">Compute</button>
+      <button class="btn-reset" onclick="resetDiscount()">Reset</button>
+    </div>
+
+    <div class="footer">
+      PROGRAMMED BY: ERANDIO, 12-COOPER
+    </div>
+
+    <a href="basic.html" class="back-btn">← Home</a>
+  </div>
+
+  <script>
+    function computeDiscount() {
+      let p = parseFloat(document.getElementById('price').value) || 0;
+      let d = parseFloat(document.getElementById('discount').value) || 0;
+      let saved = p * (d / 100);
+      let finalP = p - saved;
+      
+      document.getElementById('savedAmount').innerText = "₱ " + saved.toFixed(2);
+      document.getElementById('finalPrice').innerText = "₱ " + finalP.toFixed(2);
+    }
+
+    function resetDiscount() {
+      document.getElementById('price').value = "";
+      document.getElementById('discount').value = "";
+      document.getElementById('savedAmount').innerText = "₱ 0.00";
+      document.getElementById('finalPrice').innerText = "₱ 0.00";
+    }
+  </script>
+
+</body>
+</html>
