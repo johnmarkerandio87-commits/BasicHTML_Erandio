@@ -1,61 +1,125 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - John Mark R. Erandio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portal Login</title>
+
+    <style>
+        body {
+            background-color: #f3e5f5;
+            font-family: Arial, sans-serif;
+            color: #4a148c;
+        }
+
+        table {
+            border: 2px solid #8e44ad;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            margin-top: 50px;
+        }
+
+        thead {
+            background-color: #4a148c;
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 12px;
+        }
+
+        tbody td {
+            padding: 10px;
+            color: #4a148c;
+        }
+
+        input {
+            padding: 7px;
+            border: 1px solid #8e44ad;
+            background-color: #f8effa;
+        }
+
+        tfoot td {
+            padding: 10px;
+            text-align: center;
+            color: #6a1b9a;
+        }
+
+        input[type="submit"] {
+            background-color: #4a148c;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+        }
+
+        input[type="reset"] {
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portal.html">Portal Login</a></li>
-                <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
+    <form>
 
-    <main class="container">
-        <h2 class="portfolio-title">My Projects</h2>
-        
-        <div class="portfolio-grid">
+        <table align="center">
 
-            <div class="portfolio-card">
-                <h3>Form Elements</h3>
-                <a href="formelements.html">View Project</a>
-            </div>
+            <thead>
+                <tr>
+                    <td colspan="2">
+                        <h2>Portal Login</h2>
+                    </td>
+                </tr>
+            </thead>
 
-            <div class="portfolio-card">
-                <h3>Discount Calculator</h3>
-                <a href="discount.html">View Project</a>
-            </div>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td>
+                        <input type="text"
+                               id="username"
+                               name="username"
+                               placeholder="Enter Username">
+                    </td>
+                </tr>
 
-            <div class="portfolio-card">
-                <h3>Simple Calculator</h3>
-                <a href="simplecalculator.html">View Project</a>
-            </div>
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Enter Password">
+                    </td>
+                </tr>
+            </tbody>
 
-            <div class="portfolio-card">
-                <h3>Class Schedule</h3>
-                <a href="schedule.html">View Project</a>
-            </div>
+            <tfoot>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
 
-            <div class="portfolio-card">
-                <h3>Portal Login</h3>
-                <a href="portal.html">View Project</a>
-            </div>
+                <tr>
+                    <td colspan="2">
+                        Created by: Erandio
+                    </td>
+                </tr>
+            </tfoot>
 
-            <div class="portfolio-card">
-                <h3>HTML Outline (PDF)</h3>
-                <a href="outlinehtml.pdf" target="_blank">View PDF</a>
-            </div>
+        </table>
 
-        </div>
-    </main>
-
+    </form>
+<p><a href="index.html">Home</a></p>
 </body>
 </html>
