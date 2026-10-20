@@ -3,39 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabular Data</title>
-    <script src="student.js" defer></script>
+    <title>Students List - John Mark R. Erandio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         table {
             width: 90%;
-            border-collapse: separate;
-            border-spacing: 2px;
-            font-family: "Times New Roman", Times, serif;
-            margin-bottom: 20px;
+            margin: 20px auto;
+            border-collapse: collapse;
         }
         th, td {
-            border: 1px solid black;
-            padding: 8px 15px;
+            border: 1px solid #ccc;
+            padding: 8px;
             text-align: center;
+        }
+        th {
+            background-color: #0d47a1;
+            color: white;
+        }
+        img {
+            border-radius: 5px;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <center>
-    <table border="2">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 style="text-align: center; color: #0d47a1; margin-top: 20px;">Grade 12 Cooper Students</h2>
+
+    <table>
         <thead>
             <tr>
                 <th>LRN</th>
-                <th>NAME</th>
-                <th>AGE</th>
-                <th>SECTION</th>
-                <th>IMAGES</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Section</th>
+                <th>Image</th>
             </tr>
         </thead>
         <tbody id="output">
+            <!-- Dito kusang ipapasok ng student.js ang mga data -->
         </tbody>
     </table>
-         <a href="index.html"> Home </a>
-    </center>
+
+    <script src="student.js"></script>
 </body>
 </html>
