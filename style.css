@@ -1,74 +1,66 @@
-* General Reset */
-* {
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #ffffff;
+/* Deep Blue Navigation Bar */
+header nav {
+    background-color: #0d47a1; /* Dark/Deep Blue background */
+    padding: 12px 0;
     text-align: center;
 }
 
-/* Navigation Bar */
-header {
-    background-color: #004080; /* Blue background */
-    width: 100%;
-}
-
-nav ul {
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    list-style: none;
-    padding: 0;
+    gap: 15px;
 }
 
-nav ul li a {
-    color: #ffffff;
+header nav ul li a {
+    color: white;
     text-decoration: none;
-    padding: 12px 18px;
-    display: block;
     font-size: 14px;
     font-weight: bold;
+    padding: 6px 12px;
+    transition: 0.3s;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    background-color: #0073e6; /* Light Blue highlight para sa active/hover */
+/* Light Blue highlight para sa Active Tab at Hover */
+header nav ul li a.active,
+header nav ul li a:hover {
+    background-color: #29b6f6; /* Light Blue background */
+    color: #0d47a1; /* Blue text para litaw */
+    border-radius: 4px;
 }
 
-/* Portfolio Links List (Gaya ng nasa screenshot) */
-.portfolio-container {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.portfolio-container a {
-    color: #0056b3; /* Blue link color */
-    text-decoration: underline;
-    font-size: 16px;
-}
-
-.portfolio-container a:hover {
-    color: #0073e6; /* Light Blue kapag itinapat ang cursor */
-}
-
-/* Home Section */
+/* Hero Section sa Home */
 .hero {
+    text-align: center;
     margin-top: 50px;
 }
 
 .hero h1 {
-    font-size: 26px;
-    color: #000000;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #0d47a1;
 }
 
 .hero p {
     font-size: 18px;
-    color: #333333;
+    color: #555;
+}
+
+/* Links Styling sa Portfolio Page */
+main ul li a {
+    color: #0288d1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main ul li a:hover {
+    text-decoration: underline;
+    color: #01579b;
 }
