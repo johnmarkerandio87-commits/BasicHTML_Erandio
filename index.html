@@ -1,29 +1,17 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - John Mark R. Erandio</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="hero">
-        <h1>John Mark R. Erandio</h1>
-        <p>12-Cooper</p>
-    </main>
+    <script src = "loginScript.js" defer> </script>
+    <div>
+        <form>
+            <h2>Login</h2>
+            <input type="text" id="username" class="inputField" placeholder="Username">
+            <input type="password" id="password" class="inputField" placeholder="Password">
+            <button id="btnLogIn">Submit</button>
+            <button type="reset">Reset</button>
+            <p id="errorMessage"></p>
+        </form>
+    </div>
 
 </body>
 </html>
