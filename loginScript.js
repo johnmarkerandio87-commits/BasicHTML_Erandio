@@ -1,20 +1,21 @@
-function compareLogin(event){
+function compareLogin(event) {
     event.preventDefault();
+
+    const USERNAME = "Clem";
+    const PASSWORD = "123";
     
-    const USERNAME = "Clementine";
-    const PASSWORD = "Clem12345";
     const userName = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    const errMessage = document.getElementById("errorMessage").value;
-    if(userName===USERNAME && Password ===Password){
+    const errMessage = document.getElementById("errMessage");
+
+    if (userName === USERNAME && password === PASSWORD) {
         alert("Correct");
         window.location.href = "message.html";
-    }else{[cite: 1]
+    } else {
         alert("Wrong");
         errMessage.textContent = "Invalid Username or Password!";
-        
     }
 }
 
-const myLogInButton = document.getElementById("btnLogIn");
-myLogInButton.addEventListener('click',compareLogin);
+const myLogInButton = document.getElementById("btnLogin");
+myLogInButton.addEventListener("click", compareLogin);
