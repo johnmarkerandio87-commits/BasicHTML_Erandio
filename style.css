@@ -1,4 +1,5 @@
 
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +8,13 @@
 }
 
 body {
-    background-color: #f4f7f9;
-    color: #333333;
+    background-color: #dce7f3;
+    color: #0d2c54;
 }
 
+
 header {
-    background-color: #0b3c5d;
+    background-color: #031b4e;
     padding: 12px 0;
 }
 
@@ -29,7 +31,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    padding: 8px 16px;
+    padding: 8px 18px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
@@ -37,10 +39,9 @@ nav ul li a {
 
 nav ul li.active a,
 nav ul li a:hover {
-    background-color: #3282b8;
+    background-color: #1a52b8; 
     color: #ffffff;
 }
-
 
 .hero {
     display: flex;
@@ -54,13 +55,13 @@ nav ul li a:hover {
 
 .hero h1 {
     font-size: 2.5rem;
-    color: #0b3c5d;
+    color: #031b4e;
     margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #555555;
+    color: #1a52b8;
 }
 
 
@@ -77,23 +78,24 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #ffffff;
-    border: 2px solid #3282b8;
-    border-radius: 8px;
-    padding: 25px 15px;
+    background-color: #e3edf7;
+    border: 2px solid #1a52b8;
+    border-radius: 10px;
+    padding: 22px 15px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    background-color: #d1e2f4;
 }
 
 .card a {
     text-decoration: none;
-    color: #0b3c5d;
-    font-size: 1.1rem;
+    color: #031b4e;
+    font-size: 1.05rem;
     font-weight: bold;
     display: block;
 }
