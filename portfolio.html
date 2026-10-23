@@ -5,10 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - John Mark R. Erandio</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: #f0f4f9 ;
+            margin: 0 ;
+            font-family: Arial, sans-serif ;
+        }
+
+      
+        header nav {
+            background-color: #0d47a1 ;
+            padding: 12px 0 ;
+            text-align: center ;
+        }
+
+        header nav ul {
+            list-style: none ;
+            margin: 0 ;
+            padding: 0 ;
+            display: flex ;
+            justify-content: center ;
+            gap: 15px ;
+        }
+
+        header nav ul li a {
+            color: #ffffff ;
+            text-decoration: none ;
+            font-size: 14px ;
+            font-weight: bold ;
+            padding: 8px 14px ;
+            border-radius: 4px ;
+            transition: 0.3s ;
+        }
+
+        header nav ul li a.active,
+        header nav ul li a:hover {
+            background-color: #1976d2 ;
+            color: #ffffff ;
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid ;
+            grid-template-columns: repeat(4, 1fr) ;
+            gap: 18px ;
+            list-style-type: none ;
+            padding: 0 ;
+            margin: 30px auto ;
+            max-width: 1100px ;
+        }
+
+        .grid-container li {
+            list-style: none ;
+        }
+
+        
+        .portfolio-card {
+            display: flex ;
+            justify-content: center ;
+            align-items: center ;
+            height: 65px ;
+            background-color: #e3f2fd ;
+            color: #0d47a1 ; 
+            text-decoration: none ;
+            font-weight: bold ;
+            font-size: 15px ;
+            text-align: center ;
+            padding: 10px ;
+            
+        
+            border: 3px double #1565c0 ;
+            border-radius: 8px ;
+            box-sizing: border-box ;
+            transition: all 0.2s ease-in-out ;
+        }
+
+        
+        .portfolio-card:hover {
+            background-color: #1565c0 ;
+            color: #ffffff ;
+            border-color: #0d47a1 ;
+            transform: translateY(-2px) ;
+            box-shadow: 0 4px 10px rgba(13, 71, 161, 0.2) ;
+        }
+
+        @media (max-width: 800px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr) ;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .grid-container {
+                grid-template-columns: 1fr ;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header & Navigation Bar -->
     <header>
         <nav>
             <ul>
@@ -21,8 +117,8 @@
         </nav>
     </header>
 
-    <!-- Main Content with Grid Cards -->
-    <main class="portfolio-container">
+    <!-- Main Content Grid -->
+    <main style="padding: 20px;">
         <ul class="grid-container">
             <li><a href="formelements.html" class="portfolio-card">Form Elements</a></li>
             <li><a href="simplecalculator.html" class="portfolio-card">Sample Calculator</a></li>
