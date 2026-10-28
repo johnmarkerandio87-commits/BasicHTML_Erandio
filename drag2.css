@@ -1,17 +1,20 @@
-h1{
+h1 {
     text-align: center;
-    color: blue;
+    color: #1e90ff;
 }
-.draggableContainer{
+
+.draggableContainer {
     text-align: center;
-    border: 1px solid rgb(209, 72, 243);
+    border: 1px solid #87cefa;
     margin-bottom: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.box{
-    background-color: blue;
+
+.box {
+    background-color: #1e90ff;
+    color: white;
     align-items: center;
     justify-content: center;
     height: 30px;
@@ -19,26 +22,27 @@ h1{
     margin-right: 5px;
     cursor: grab;
 }
-.droppableContainer{
+
+.droppableContainer {
     text-align: center;
-    border: 1px solid rgb(209, 72, 243);
+    border: 1px solid #87cefa;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.droppable{
-    background-color: blue;
+
+.droppable {
+    background-color: #add8e6;
+    color: #00008b;
     align-items: center;
     justify-content: center;
     height: 30px;
     width: 120px;
     margin-right: 5px;
 }
-.draggableFormat{
+
+.draggableFormat {
     font-weight: bold;
-    color: rgb(233, 98, 245);
-    border: 5px dotted rgb(242, 114, 247);
-}
-h1{
-    color: blue;
+    color: #1e90ff;
+    border: 5px dotted #87cefa;
 }
