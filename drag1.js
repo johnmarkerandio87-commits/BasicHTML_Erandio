@@ -1,8 +1,6 @@
 const draggableElement = document.querySelectorAll('.box');
 const droppableElement = document.querySelectorAll('.droppable');
 
-
-
 draggableElement.forEach(element=>{
     element.addEventListener('dragstart',(drgStart)=>{
         drgStart.dataTransfer.setData('text',drgStart.target.id);
@@ -23,9 +21,6 @@ droppableElement.forEach(element=>{
         drpEvt.target.appendChild(document.getElementById(droppedElementId));
 
         console.log(droppedElementId);
-
-
-
     });
 
     element.addEventListener('dragover',(drgOverEvt)=>{
@@ -36,14 +31,7 @@ droppableElement.forEach(element=>{
 
 draggableElement.forEach(element=>{
     element.addEventListener('dragend',drgend=>{
-       
-
-
 
     });
 
 });
-drgstart.target.id
-drgstart.target.id
-drgstart.target.id
-drgstart.target.id
