@@ -1,6 +1,6 @@
 h1{
     text-align: center;
-    color: green;
+    color: blue;
 }
 .draggableContainer{
     text-align: center;
@@ -11,7 +11,7 @@ h1{
     justify-content: space-around;
 }
 .box{
-    background-color: purple;
+    background-color: blue;
     align-items: center;
     justify-content: center;
     height: 30px;
@@ -27,7 +27,7 @@ h1{
     justify-content: space-around;
 }
 .droppable{
-    background-color: purple;
+    background-color: blue;
     align-items: center;
     justify-content: center;
     height: 30px;
