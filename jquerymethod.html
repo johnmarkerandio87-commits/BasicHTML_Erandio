@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Methods</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#box").animate({
+                    width: "300px"
+                });
+                $("#box").animate({
+                    height: "300px"
+                });
+            });
+
+            $("#b2").click(function () {
+                $("#d1").delay("slow").fadeIn();
+                $("#d2").delay("fast").fadeIn();
+                $("#d3").delay(1000).fadeIn();
+                $("#d4").delay(2000).fadeIn();
+            });
+
+            $(document).ready(function () {
+                $(".btn1").click(function () {
+                    $("#p1").slideUp();
+                });
+                $(".btn2").click(function () {
+                    $("#p1").slideDown();
+                });
+            });
+
+            $(document).ready(function () {
+                $(".b1").click(function () {
+                    $("#p3").hide();
+                });
+                $(".b2").click(function () {
+                    $("#p3").show();
+                });
+            });
+        });
+
+    </script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: light blue;
+        }
+
+        #b1 {
+            margin-top: 10px;
+        }
+
+        #border {
+            width: 300px;
+            height: 100px;
+            padding: 20px;
+            border: 2px solid blue;
+        }
+
+        #border2 {
+            width: 40%;
+            height: 100px;
+            border: 2px solid blue;
+            padding: 20px;
+        }
+
+        #hide {
+            width: 50%;
+            height: 80px;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid blue;
+            font-size: 30px;
+        }
+
+        .b1 {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <a href="../portfolio.html">
+        <h2>Home</h2>
+    </a>
+    <br>
+
+    <div id="box"></div>
+    <button id="b1">Enlarge Box (Animate)</button>
+
+   
+    <button id="b2">Show Boxes (Fade In)</button>
+    <br><br>
+    <div id="d1" style="width:50px;height:50px;display:
+                none;background-color:lightgrey;"></div>
+    <br>
+    <div id="d2" style="width:50px;height:50px;display:
+                none;background-color:gray;"></div>
+    <br>
+    <div id="d3" style="width:50px;height:50px;display:
+                none;background-color:lightblue;"></div>
+    <br>
+    <div id="d4" style="width:50px;height:50px;display:
+                none;background-color:blue;"></div>
+    <br>
+
+   
+    <div id="border">
+        <p id="p1">This paragraph will get hide.</p>
+        <button class="btn1">Slide up</button>
+        <button class="btn2">Slide down</button>
+    </div>
+
+    <br>
+
+
+    <div id="border2">
+        <p id="p2">
+            This paragraph will fade out !
+        </p>
+
+        <p>
+            This paragraph will not fade !
+        </p>
+
+        <script>
+            $("#p2").click(function () {
+                $(this).fadeTo("slow", 0.33);
+            });
+        </script>
+    </div>
+
+    <br>
+
+  
+    <div id="hide">
+        <p id="p3">Geek para msa Geeks !.</p>
+    </div>
+    <button class="b1">Hide</button>
+    <button class="b2">Show</button>
+</body>
+
+</html>
