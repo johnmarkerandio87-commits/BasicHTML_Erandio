@@ -577,3 +577,98 @@ details .content {
   right: 10px;
 }
 
+.gallery-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.gallery-container h2 {
+  color: #0b2559;
+  margin-bottom: 20px;
+}
+
+/* CAROUSEL WRAPPER */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #0b2559;
+  box-shadow: 0 4px 15px rgba(11, 37, 89, 0.2);
+  border: 3px solid #0b2559;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.slide-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ARROW BUTTONS SA GILID */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(11, 37, 89, 0.75);
+  color: white;
+  border: 2px solid #ffffff;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  z-index: 10;
+}
+
+.arrow-btn:hover {
+  background-color: #1d56b8;
+}
+
+.prev-btn {
+  left: 15px;
+}
+
+.next-btn {
+  right: 15px;
+}
+
+/* DOTS INDICATORS SA ILALIM */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bcd3fc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #0b2559;
+  transform: scale(1.2);
+}
+
