@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Tree Canvas</title>
+
+    <style>
+        #myDrawing {
+            border: solid 1px green;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: grid;
+            place-items: center; 
+        }
+    </style>
+</head>
+<body>
+    <canvas height="500" width="1000" id="myDrawing"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myDrawing");
+        const ctx = canvas.getContext("2d");
+
+     
+        ctx.beginPath();
+        ctx.moveTo(475, 350);
+        ctx.lineTo(525, 350);
+        ctx.lineTo(525, 430);
+        ctx.lineTo(475, 430);
+        ctx.closePath();
+
+        ctx.fillStyle = '#5D4037'; 
+        ctx.fill();
+        ctx.strokeStyle = '#3E2723';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+  
+        ctx.beginPath();
+        ctx.moveTo(500, 200); // Top point
+        ctx.lineTo(350, 350); // Bottom left
+        ctx.lineTo(650, 350); // Bottom right
+        ctx.closePath();
+
+        ctx.fillStyle = '#2E7D32'; // Dark Green
+        ctx.fill();
+        ctx.strokeStyle = '#1B5E20';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+      
+        ctx.beginPath();
+        ctx.moveTo(500, 130); 
+        ctx.lineTo(380, 260); 
+        ctx.lineTo(620, 260); 
+        ctx.closePath();
+
+        ctx.fillStyle = '#388E3C';
+        ctx.fill();
+        ctx.strokeStyle = '#1B5E20';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+    
+        ctx.beginPath();
+        ctx.moveTo(500, 70); 
+        ctx.lineTo(410, 180); 
+        ctx.lineTo(590, 180);
+        ctx.closePath();
+
+        ctx.fillStyle = '#4CAF50';
+        ctx.fill();
+        ctx.strokeStyle = '#1B5E20';
+        ctx.lineWidth = 3;
+        ctx.stroke();
+    </script>
+</body>
+</html>
