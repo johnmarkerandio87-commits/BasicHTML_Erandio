@@ -20,20 +20,20 @@
 
   <div class="gallery-container">
     <h2>Photo Gallery</h2>
-    <div class="gallery-slider">
-      <div class="slide-track">
-        <div class="slide"><img src="image3.jpg" alt="me"></div>
-        <div class="slide"><img src="image4.jpg" alt="family"></div>
-        <div class="slide"><img src="image2.jpg" alt="friends"></div>
-        <div class="slide"><img src="image5.jpg" alt="me and brother"></div>
-        <div class="slide"><img src="image1.jpg" alt="friends"></div>
-        <!-- Ulitin para sa seamless loop -->
-        <div class="slide"><img src="image3.jpg" alt="me"></div>
-        <div class="slide"><img src="image4.jpg" alt="family"></div>
-        <div class="slide"><img src="image2.jpg" alt="friends"></div>
-        <div class="slide"><img src="image5.jpg" alt="me and brother"></div>
-        <div class="slide"><img src="image1.jpg" alt="friends"></div>
+    
+    <!-- MANUAL SLIDER CONTAINER -->
+    <div class="manual-slider">
+      <div class="slider-wrapper" id="sliderWrapper">
+        <div class="slide-item"><img src="image1.jpg" alt="Photo 1"></div>
+        <div class="slide-item"><img src="image2.jpg" alt="Photo 2"></div>
+        <div class="slide-item"><img src="image3.jpg" alt="Photo 3"></div>
+        <div class="slide-item"><img src="image4.jpg" alt="Photo 4"></div>
+        <div class="slide-item"><img src="image5.jpg" alt="Photo 5"></div>
       </div>
+
+      <!-- MGA BUTTONS / ARROWS SA GILID -->
+      <button class="slider-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="slider-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
     </div>
   </div>
 
@@ -56,6 +56,26 @@
       <p>&copy; 2026 All Rights Reserved | Designed by: John Mark R. Erandio</p>
     </div>
   </footer>
+
+  <!-- SIMPLE JAVASCRIPT PARA SA PAG-CLICK NG BUTTON -->
+  <script>
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+      const wrapper = document.getElementById('sliderWrapper');
+      const totalSlides = wrapper.children.length;
+      
+      currentIndex += direction;
+
+      if (currentIndex >= totalSlides) {
+        currentIndex = 0; // Bumabalik sa unahan kapag umabot sa dulo
+      } else if (currentIndex < 0) {
+        currentIndex = totalSlides - 1; // Pumupunta sa dulo kapag pinilit sa kaliwa mula sa umpisa
+      }
+
+      wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  </script>
 
 </body>
 </html>
