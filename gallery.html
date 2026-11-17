@@ -21,27 +21,16 @@
   <div class="gallery-container">
     <h2>My Photo Gallery</h2>
     
-    <!-- CAROUSEL SLIDER CONTAINER -->
-    <div class="carousel-container">
-      <div class="carousel-slide" id="carouselSlide">
-        <div class="slide-item"><img src="image1.jpg" alt="Photo 1"></div>
-        <div class="slide-item"><img src="image2.jpg" alt="Photo 2"></div>
-        <div class="slide-item"><img src="image3.jpg" alt="Photo 3"></div>
-        <div class="slide-item"><img src="image4.jpg" alt="Photo 4"></div>
-                <div class="slide-item"><img src="image5.jpg" alt="Photo 4"></div>
+    <!-- COVERFLOW / CLICKABLE GALLERY CONTAINER -->
+    <div class="coverflow-container" id="coverflow">
+      <div class="coverflow-track" id="track">
+        <div class="cover-item active" onclick="selectSlide(0)"><img src="image1.jpg" alt="Photo 1"></div>
+        <div class="cover-item" onclick="selectSlide(1)"><img src="image2.jpg" alt="Photo 2"></div>
+        <div class="cover-item" onclick="selectSlide(2)"><img src="image3.jpg" alt="Photo 3"></div>
+        <div class="cover-item" onclick="selectSlide(3)"><img src="image1.jpg" alt="Photo 1"></div>
+        <div class="cover-item" onclick="selectSlide(3)"><img src="image4.jpg" alt="Photo 4"></div>
+        <div class="cover-item" onclick="selectSlide(3)"><img src="image5.jpg" alt="Photo 5"></div>
       </div>
-
-      <!-- ARROW BUTTONS SA GILID -->
-      <button class="arrow-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
-      <button class="arrow-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-
-    <!-- DOTS INDICATORS SA ILALIM -->
-    <div class="dots-container">
-      <span class="dot active" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
   </div>
 
@@ -65,32 +54,26 @@
     </div>
   </footer>
 
-  <!-- JAVASCRIPT PARA SA MGA ARROWS AT DOTS -->
+  <!-- JAVASCRIPT PARA SA PAG-CLICK NG LITRATO -->
   <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide-item');
-    const dots = document.querySelectorAll('.dot');
-    const slider = document.getElementById('carouselSlide');
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.cover-item');
+    const track = document.getElementById('track');
 
-    function updateSlider() {
-      slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[slideIndex].classList.add('active');
-    }
+    function selectSlide(index) {
+      currentIndex = index;
+      
+      items.forEach((item, i) => {
+        item.classList.remove('active');
+        if (i === currentIndex) {
+          item.classList.add('active');
+        }
+      });
 
-    function changeSlide(n) {
-      slideIndex += n;
-      if (slideIndex >= slides.length) {
-        slideIndex = 0;
-      } else if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-      }
-      updateSlider();
-    }
-
-    function currentSlide(n) {
-      slideIndex = n;
-      updateSlider();
+      // Pagsentro ng napiling litrato
+      // Binabawas ang porsyento para pumagitna ang aktibong larawan
+      const offset = 50 - (currentIndex * 50) - 25;
+      track.style.transform = `translateX(${offset}%)`;
     }
   </script>
 
