@@ -282,8 +282,9 @@ details .content {
   margin-top: 60px;
   background-color: #031b4e;
   color: #ffffff;
-  padding: 30px 40px;
+  padding: 30px 20px;
   border-top: 3px solid #1a52b8;
+  width: 100%;
 }
 
 .footer-top {
@@ -310,7 +311,7 @@ details .content {
   font-size: 0.9rem;
   line-height: 1.5;
   color: #d4e7fe;
-  margin-bottom: 12px;
+  margin: 0;
 }
 
 .footer-right {
@@ -357,6 +358,9 @@ details .content {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   font-size: 0.85rem;
   color: #d4e7fe;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-bottom p {
