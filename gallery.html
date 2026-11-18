@@ -5,6 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - John Mark R. Erandio</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Karagdagang CSS para sa Coverflow Carousel */
+    .coverflow-container {
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      margin: 40px auto;
+      position: relative;
+    }
+
+    .coverflow-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+      will-change: transform;
+    }
+
+    .cover-item {
+      min-width: 20%;
+      box-sizing: border-box;
+      cursor: pointer;
+      opacity: 0.5;
+      transform: scale(0.85);
+      transition: opacity 0.3s, transform 0.3s;
+      padding: 0 10px;
+    }
+
+    .cover-item.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .cover-item img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 <body>
 
@@ -27,9 +65,8 @@
         <div class="cover-item active" onclick="selectSlide(0)"><img src="image1.jpg" alt="Photo 1"></div>
         <div class="cover-item" onclick="selectSlide(1)"><img src="image2.jpg" alt="Photo 2"></div>
         <div class="cover-item" onclick="selectSlide(2)"><img src="image3.jpg" alt="Photo 3"></div>
-        <div class="cover-item" onclick="selectSlide(3)"><img src="image1.jpg" alt="Photo 1"></div>
         <div class="cover-item" onclick="selectSlide(3)"><img src="image4.jpg" alt="Photo 4"></div>
-        <div class="cover-item" onclick="selectSlide(3)"><img src="image5.jpg" alt="Photo 5"></div>
+        <div class="cover-item" onclick="selectSlide(4)"><img src="image5.jpg" alt="Photo 5"></div>
       </div>
     </div>
   </div>
@@ -63,6 +100,7 @@
     function selectSlide(index) {
       currentIndex = index;
       
+      // I-update ang active class sa bawat item
       items.forEach((item, i) => {
         item.classList.remove('active');
         if (i === currentIndex) {
@@ -70,9 +108,8 @@
         }
       });
 
-      // Pagsentro ng napiling litrato
-      // Binabawas ang porsyento para pumagitna ang aktibong larawan
-      const offset = 50 - (currentIndex * 50) - 25;
+      // Kalkulahin ang offset para pumunta sa gitna ang napiling larawan
+      const offset = 40 - (currentIndex * 20); 
       track.style.transform = `translateX(${offset}%)`;
     }
   </script>
