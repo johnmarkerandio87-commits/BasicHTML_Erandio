@@ -65,22 +65,22 @@
 
         drawTree(200, 220);
 
-        ctx.fillStyle = "#1a52b8";
+        ctx.fillStyle = "#2e8b57";
         ctx.font = "bold 28px Arial";
         ctx.textAlign = "left";
 
         ctx.fillText("Advance Merry", 320, 210);
         ctx.fillText("Christmas!", 320, 250);
 
-        function drawBlueCircles() {
+        function drawGreenCircles() {
             for (let i = 0; i < 15; i++) {
                 const x = Math.random() * 300 + 450;
                 const y = Math.random() * 400 + 50;
                 const radius = Math.random() * 4 + 2;
 
-                const hue = Math.floor(Math.random() * 40) + 195;
-                const lightness = Math.floor(Math.random() * 50) + 35;
-                ctx.fillStyle = "hsl(" + hue + ", 85%, " + lightness + "%)";
+                const hue = Math.floor(Math.random() * 40) + 100;
+                const lightness = Math.floor(Math.random() * 40) + 30;
+                ctx.fillStyle = "hsl(" + hue + ", 70%, " + lightness + "%)";
 
                 ctx.beginPath();
                 ctx.arc(x, y, radius, 0, Math.PI * 2);
@@ -88,7 +88,7 @@
             }
         }
 
-        drawBlueCircles();
+        drawGreenCircles();
     </script>
 </body>
 </html>
