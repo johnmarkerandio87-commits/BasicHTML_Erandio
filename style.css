@@ -462,3 +462,72 @@ details .content {
   margin-bottom: 4px;
 }
 
+
+
+
+.home-card {
+  background-color: #ffffff;
+  border-left: 5px solid #0d47a1;
+  border-radius: 10px;
+  padding: 28px 26px;
+  max-width: 560px;
+  width: 90%;
+  margin: 40px auto;
+  box-shadow: 0 6px 18px rgba(13, 71, 161, 0.1);
+}
+
+.home-card h1 {
+  color: #0d47a1;
+  margin: 0 0 10px 0;
+  font-size: 28px;
+}
+
+.home-line {
+  width: 55px;
+  height: 4px;
+  background-color: #1976d2;
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+
+.home-card p {
+  color: #333333;
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0 0 18px 0;
+}
+
+.home-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  background-color: #0d47a1;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.home-btn:hover {
+  background-color: #1976d2;
+}
+
+.home-btn-outline {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  text-decoration: none;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.home-btn-outline:hover {
+  background-color: #bbdefb;
+}
+
