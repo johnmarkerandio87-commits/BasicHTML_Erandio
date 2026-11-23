@@ -531,3 +531,137 @@ details .content {
   background-color: #bbdefb;
 }
 
+
+
+
+
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border-top: 5px solid #0d47a1;
+  border-radius: 12px;
+  padding: 32px 28px;
+  max-width: 680px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(13, 71, 161, 0.12);
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.contact-badge {
+  display: inline-block;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contact-header h1 {
+  color: #0d47a1;
+  margin: 0 0 8px 0;
+  font-size: 28px;
+}
+
+.contact-header p {
+  color: #4a5568;
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-detail-box {
+  flex: 1 1 260px;
+  background-color: #f4f8fd;
+  border: 1px solid #bbdefb;
+  border-left: 4px solid #1976d2;
+  border-radius: 8px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1565c0;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.contact-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #031b4e;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary {
+  background-color: #0d47a1;
+  color: #ffffff;
+  border: none;
+  padding: 11px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1976d2;
+}
+
+.btn-secondary {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  border: 1px solid #90caf9;
+  padding: 11px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #bbdefb;
+}
+
+.copy-status {
+  text-align: center;
+  color: #1565c0;
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 12px;
+  min-height: 18px;
+}
