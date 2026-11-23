@@ -20,18 +20,41 @@
         </nav>
     </header>
 
-    <main class="hero">
-        <div class="contact-box">
-            <h1>Contact Me</h1>
-            <p class="contact-intro">Reach out for school projects, inquiries, or collaborations.</p>
-            <div class="contact-item">
-                <strong>Instagram Name</strong>
-                erandiojm_clm
+    <main class="contact-section">
+        <div class="contact-card">
+            <div class="contact-header">
+                <span class="contact-badge">Get in Touch</span>
+                <h1>Contact Information</h1>
+                <p>Reach out for school projects, inquiries, or collaborations.</p>
             </div>
-            <div class="contact-item">
-                <strong>Section</strong>
-                12 - Cooper
+
+            <div class="contact-grid">
+                <div class="contact-detail-box">
+                    <span class="contact-label">Mobile Number</span>
+                    <span class="contact-value" id="mobileNumber">0938-2312-7881</span>
+                </div>
+
+                <div class="contact-detail-box">
+                    <span class="contact-label">Instagram</span>
+                    <span class="contact-value">@erandiojm_clm</span>
+                </div>
+
+                <div class="contact-detail-box">
+                    <span class="contact-label">Grade &amp; Section</span>
+                    <span class="contact-value">Grade 12 - Cooper</span>
+                </div>
+
+                <div class="contact-detail-box">
+                    <span class="contact-label">Availability</span>
+                    <span class="contact-value">Open for Collaborations</span>
+                </div>
             </div>
+
+            <div class="contact-actions">
+                <button type="button" class="btn-primary" onclick="copyNumber()">Copy Mobile Number</button>
+                <a href="https://instagram.com/erandiojm_clm" target="_blank" class="btn-secondary">Visit Instagram</a>
+            </div>
+            <div class="copy-status" id="copyStatus"></div>
         </div>
     </main>
 
@@ -52,6 +75,14 @@
         </div>
       </div>
     </footer>
+
+    <script>
+        function copyNumber() {
+            const number = document.getElementById("mobileNumber").innerText;
+            navigator.clipboard.writeText(number);
+            document.getElementById("copyStatus").innerText = "Mobile number copied: " + number;
+        }
+    </script>
 
 </body>
 </html>
