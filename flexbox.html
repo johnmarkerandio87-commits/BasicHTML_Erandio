@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Flexbox Tutorial Demo</title>
+  
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, -apple-system, sans-serif;    
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 25px;
+  min-height: 300px;
+  padding: 16px;
+  border: 3px solid #6b21a8;
+}
+
+.child {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  padding: 16px;
+  background-color: #93c5fd;
+  border: 1px solid #1e40af;
+}
+
+.red {
+  background-color: #fca5a5;
+  border-color: #991b1b;
+}
+
+.violet {
+  background-color: #d8b4fe;
+  border-color: #6b21a8;
+}
+
+.pink {
+  background-color: #f9a8d4;
+  border-color: #9d174d;
+}
+  </style>
+</head>
+<body>
+ <a href="portfolio.html">home</a>
+  <div class="parent">
+    <div class="child blue">1 Pizza</div>
+    <div class="child red">2 Burger</div>
+    <div class="child violet">3 Pasta</div>
+    <div class="child pink">4 Ice Cream</div>
+  </div>
+</body>
+</html>
