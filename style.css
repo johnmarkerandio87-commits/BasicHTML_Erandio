@@ -1281,3 +1281,66 @@ nav ul li a i {
 .social-links a i {
   font-size: 16px;
 }
+
+
+
+
+
+
+header, nav.navbar {
+  background-color: #031b4e;
+  padding: 12px 0;
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a i {
+  margin-right: 6px;
+  width: 16px;
+  text-align: center;
+}
+
+nav ul li.active a,
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #1a52b8;
+  color: #ffffff;
+}
