@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery - John Mark R. Erandio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css"> 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,56 +12,34 @@
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="active"><a href="gallery.html">Gallery</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+        <li class="active"><a href="gallery.html"><i class="fa-solid fa-images"></i>Gallery</a></li>
+        <li><a href="portfolio.html"><i class="fa-solid fa-folder-open"></i>Portfolio</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i>Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="gallery-container">
-    <h2>My Photo Gallery</h2>
-    
-    <div class="coverflow-container" id="coverflow">
-      <div class="coverflow-track" id="track">
-        <div class="cover-item active" onclick="selectSlide(0)"><img src="image3.jpg" alt="Photo 1"></div>
-        <div class="cover-item" onclick="selectSlide(1)"><img src="image2.jpg" alt="Photo 2"></div>
-        <div class="cover-item" onclick="selectSlide(2)"><img src="image6.jpg" alt="Photo 3"></div>
-        <div class="cover-item" onclick="selectSlide(3)"><img src="image4.jpg" alt="Photo 4"></div>
-        <div class="cover-item" onclick="selectSlide(4)"><img src="image5.jpg" alt="Photo 5"></div>
-        <div class="cover-item" onclick="selectSlide(5)"><img src="image1.jpg" alt="Photo 6"></div>
-        <div class="cover-item" onclick="selectSlide(6)"><img src="image7.jpg" alt="Photo 7"></div>
+  <main>
+    <div class="gallery-container">
+      <h2>My Photo Gallery</h2>
+
+      <div class="coverflow-container" id="coverflow">
+        <div class="coverflow-track" id="track">
+          <div class="cover-item active" onclick="selectSlide(0)"><img src="image3.jpg" alt="Photo 1"></div>
+          <div class="cover-item" onclick="selectSlide(1)"><img src="image2.jpg" alt="Photo 2"></div>
+          <div class="cover-item" onclick="selectSlide(2)"><img src="image6.jpg" alt="Photo 3"></div>
+          <div class="cover-item" onclick="selectSlide(3)"><img src="image4.jpg" alt="Photo 4"></div>
+          <div class="cover-item" onclick="selectSlide(4)"><img src="image5.jpg" alt="Photo 5"></div>
+          <div class="cover-item" onclick="selectSlide(5)"><img src="image1.jpg" alt="Photo 6"></div>
+          <div class="cover-item" onclick="selectSlide(6)"><img src="image7.jpg" alt="Photo 7"></div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
- 
-    
-  <script>
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.cover-item');
-    const track = document.getElementById('track');
-
-    function selectSlide(index) {
-      currentIndex = index;
-      
-      items.forEach((item, i) => {
-        item.classList.remove('active');
-        if (i === currentIndex) {
-          item.classList.add('active');
-        }
-      });
-
-      const offset = 20 - (currentIndex * 60); 
-      track.style.transform = `translateX(${offset}%)`;
-    }
-
-    selectSlide(0);
-  </script>
-
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-left">
         <h4>Stay Connected!</h4>
@@ -72,13 +49,39 @@
       <div class="footer-right">
         <h4>Follow Me</h4>
         <div class="social-links">
-          <a href="#">FB</a>
-          <a href="#">YT</a>
-          <a href="#">IG</a>
+          <a href="https://www.facebook.com/profile.php?id=61594543576758" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@wrthlssjm?_r=1&_t=ZS-9BgwN5VoQTQ" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://instagram.com/erandiojm_clm" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </div>
   </footer>
-  
+
+  <script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.cover-item');
+    const track = document.getElementById('track');
+    const container = document.getElementById('coverflow');
+
+    function selectSlide(index) {
+      currentIndex = index;
+
+      items.forEach((item, i) => {
+        item.classList.toggle('active', i === currentIndex);
+      });
+
+      const activeItem = items[currentIndex];
+      const containerCenter = container.clientWidth / 2;
+      const itemCenter = activeItem.offsetLeft + activeItem.offsetWidth / 2;
+      const offset = containerCenter - itemCenter;
+
+      track.style.transform = `translateX(${offset}px)`;
+    }
+
+    window.addEventListener('resize', () => selectSlide(currentIndex));
+    window.addEventListener('load', () => selectSlide(0));
+    selectSlide(0);
+  </script>
+
 </body>
 </html>
