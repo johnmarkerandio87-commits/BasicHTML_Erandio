@@ -1054,3 +1054,98 @@ details .content {
     max-height: 250px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gallery-container {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  max-width: 1120px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.gallery-container h2 {
+  color: #031b4e;
+  margin-bottom: 24px;
+  font-size: 2.15rem;
+}
+
+.coverflow-container {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  min-height: 380px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coverflow-track {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.cover-item {
+  flex: 0 0 54%;
+  min-width: 54%;
+  padding: 0 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  opacity: 0.45;
+  transform: scale(0.78);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.cover-item.active {
+  opacity: 1;
+  transform: scale(1.04);
+  z-index: 10;
+}
+
+.cover-item img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border: 3px solid #ffffff;
+}
+
+@media (max-width: 768px) {
+  .coverflow-container {
+    min-height: 280px;
+  }
+
+  .cover-item {
+    flex: 0 0 78%;
+    min-width: 78%;
+  }
+
+  .cover-item img {
+    max-height: 250px;
+  }
+}
