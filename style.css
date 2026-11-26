@@ -1227,3 +1227,57 @@ details .content {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   border: 3px solid #ffffff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+nav ul li a i {
+  margin-right: 6px;
+}
+
+.hero-badge i {
+  margin-right: 6px;
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background-color: #f4f8fd;
+  border: 1px solid #bbdefb;
+  color: #031b4e;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.highlight-pill i {
+  color: #0d47a1;
+}
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a i {
+  font-size: 16px;
+}
